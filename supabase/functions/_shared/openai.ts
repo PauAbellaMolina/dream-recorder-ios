@@ -36,5 +36,7 @@ export async function generateVideoPrompt(transcript: string): Promise<string> {
   });
   if (!r.ok) throw new Error(`gpt_failed:${r.status}`);
   const body = await r.json();
-  return body.choices[0].message.content.trim();
+  const content = body?.choices?.[0]?.message?.content;
+  if (typeof content !== "string") throw new Error("gpt_empty");
+  return content.trim();
 }

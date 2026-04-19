@@ -14,12 +14,13 @@ serve(async (req) => {
     .order("created_at", { ascending: true }).limit(1).maybeSingle();
   if (!data) return err("no_pending", 404);
 
-  const { data: signed } = await sb.storage.from("dream-videos")
+  const { data: signed, error: signErr } = await sb.storage.from("dream-videos")
     .createSignedUrl(data.storage_path, 600);
+  if (signErr || !signed) return err("signing_failed", 500, signErr?.message);
 
   return json({
     dream_id: data.id,
-    video_signed_url: signed!.signedUrl,
+    video_signed_url: signed.signedUrl,
     transcript: data.transcript,
   });
 });
