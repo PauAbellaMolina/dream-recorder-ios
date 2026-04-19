@@ -31,12 +31,14 @@ insert into storage.buckets (id, name, public) values ('dream-videos','dream-vid
 
 -- Cleanup function + cron
 create or replace function cleanup_pending_dreams() returns void as $$
-declare row record;
-begin
-  for row in select id, storage_path from pending_dreams where created_at < now() - interval '1 hour' loop
-    delete from storage.objects where bucket_id = 'dream-videos' and name = row.storage_path;
-    delete from pending_dreams where id = row.id;
-  end loop;
-end; $$ language plpgsql;
+  with expired as (
+    delete from pending_dreams
+    where created_at < now() - interval '1 hour'
+    returning storage_path
+  )
+  delete from storage.objects
+  where bucket_id = 'dream-videos'
+    and name in (select storage_path from expired);
+$$ language sql;
 
 select cron.schedule('cleanup-pending-dreams', '*/15 * * * *', $$select cleanup_pending_dreams()$$);
