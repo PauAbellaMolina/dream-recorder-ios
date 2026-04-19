@@ -6,6 +6,9 @@ final class DeviceIdentityTests: XCTestCase {
     override func setUp() {
         DeviceIdentity.shared.resetForTesting()
     }
+    override func tearDown() {
+        DeviceIdentity.shared.resetForTesting()
+    }
     func test_deviceID_isStableAcrossCalls() {
         let first = DeviceIdentity.shared.deviceID
         let second = DeviceIdentity.shared.deviceID

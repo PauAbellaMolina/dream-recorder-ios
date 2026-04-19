@@ -14,7 +14,9 @@ final class DeviceIdentity {
         return new
     }
 
+    #if DEBUG
     func resetForTesting() { delete() }
+    #endif
 
     private func read() -> String? {
         let q: [String: Any] = [
@@ -37,7 +39,8 @@ final class DeviceIdentity {
             kSecAttrAccount as String: account,
             kSecValueData as String: value.data(using: .utf8)!,
         ]
-        SecItemAdd(q as CFDictionary, nil)
+        let status = SecItemAdd(q as CFDictionary, nil)
+        assert(status == errSecSuccess, "Keychain write failed: \(status)")
     }
     private func delete() {
         let q: [String: Any] = [
