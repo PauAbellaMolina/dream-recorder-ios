@@ -22,19 +22,30 @@ export async function checkAndConsumeQuota(
   client: SupabaseClient,
   deviceId: string,
 ): Promise<{ ok: true } | { ok: false; reason: "quota_exhausted" }> {
-  const { data: existing } = await client.from("devices").select("*").eq("id", deviceId).maybeSingle();
+  const { data: existing, error: selErr } = await client
+    .from("devices").select("*").eq("id", deviceId).maybeSingle();
+  if (selErr) throw new Error(`devices_select_failed:${selErr.message}`);
+
   let row = existing;
   if (!row) {
-    const { data: inserted } = await client.from("devices").insert({ id: deviceId }).select().single();
-    row = inserted!;
+    const { data: upserted, error: upErr } = await client
+      .from("devices")
+      .upsert({ id: deviceId }, { onConflict: "id", ignoreDuplicates: false })
+      .select().single();
+    if (upErr) throw new Error(`devices_upsert_failed:${upErr.message}`);
+    row = upserted!;
   }
+
   const rolled = rolloverIfNeeded({ dreams_this_week: row.dreams_this_week, week_start: row.week_start });
   const tier = row.tier as Tier;
   if (rolled.dreams_this_week >= QUOTAS[tier]) return { ok: false, reason: "quota_exhausted" };
-  await client.from("devices").update({
+
+  const { error: updErr } = await client.from("devices").update({
     dreams_this_week: rolled.dreams_this_week + 1,
     week_start: rolled.week_start.toISOString().slice(0, 10),
   }).eq("id", deviceId);
+  if (updErr) throw new Error(`devices_update_failed:${updErr.message}`);
+
   return { ok: true };
 }
 

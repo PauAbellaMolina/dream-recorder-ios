@@ -10,6 +10,6 @@ export const err = (code: string, status = 400, detail?: string) =>
 
 export const getDeviceId = (req: Request): string | null => {
   const id = req.headers.get("x-device-id");
-  if (!id || !/^[0-9a-f-]{36}$/i.test(id)) return null;
+  if (!id || !/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(id)) return null;
   return id.toLowerCase();
 };
