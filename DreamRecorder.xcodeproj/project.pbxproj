@@ -6,6 +6,16 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		69A2C63AB09AE0E7B6E03A1B /* DeviceIdentityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8718CD902DB87A5FB32BA7 /* DeviceIdentityTests.swift */; };
+		69FF5D2D3340A5B921B924E4 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7668BA1B6807C2840D754A5 /* RootView.swift */; };
+		6C5A7EAB5939F62B766F532A /* Dream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7AF572FB8FC3FCC214E40C /* Dream.swift */; };
+		72E9E794E946C2177E4A8F13 /* DeviceIdentity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB604EB17C397C831940D52E /* DeviceIdentity.swift */; };
+		82531ACF0D6F39031646A99A /* BackendConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EE1E6D4B0D8D937600C4B3 /* BackendConfig.swift */; };
+		9778CEC3D51301B2B27D6707 /* DreamResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2B58C8FEC43B7F0E584BF1 /* DreamResponse.swift */; };
+		AAE49EA7C09BF61E9D05A82F /* DreamRecorderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDD71E6A37D7088D716E32F /* DreamRecorderApp.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		C8A377B4E57256F933258685 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -19,7 +29,14 @@
 /* Begin PBXFileReference section */
 		428DCC8ECA216C0AE8D54DE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		46B165434471035C14AE0AB1 /* DreamRecorderTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = DreamRecorderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E2B58C8FEC43B7F0E584BF1 /* DreamResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamResponse.swift; sourceTree = "<group>"; };
+		5E8718CD902DB87A5FB32BA7 /* DeviceIdentityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceIdentityTests.swift; sourceTree = "<group>"; };
 		65A40AF1A6598CE6441ACFD1 /* DreamRecorder.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = DreamRecorder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F7AF572FB8FC3FCC214E40C /* Dream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dream.swift; sourceTree = "<group>"; };
+		9BDD71E6A37D7088D716E32F /* DreamRecorderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamRecorderApp.swift; sourceTree = "<group>"; };
+		BB604EB17C397C831940D52E /* DeviceIdentity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceIdentity.swift; sourceTree = "<group>"; };
+		D7668BA1B6807C2840D754A5 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		F2EE1E6D4B0D8D937600C4B3 /* BackendConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendConfig.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -42,6 +59,7 @@
 		166D9766B7C71AAC0B9E5E6C /* Config */ = {
 			isa = PBXGroup;
 			children = (
+				F2EE1E6D4B0D8D937600C4B3 /* BackendConfig.swift */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -56,6 +74,8 @@
 		362A2FA68D6AC357A3CF4C99 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7F7AF572FB8FC3FCC214E40C /* Dream.swift */,
+				5E2B58C8FEC43B7F0E584BF1 /* DreamResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -111,6 +131,7 @@
 		B221C82788F3E8E64FD4A037 /* DreamRecorderTests */ = {
 			isa = PBXGroup;
 			children = (
+				5E8718CD902DB87A5FB32BA7 /* DeviceIdentityTests.swift */,
 			);
 			path = DreamRecorderTests;
 			sourceTree = "<group>";
@@ -118,6 +139,8 @@
 		BBE054E0B7BBC726E6B3DE70 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				9BDD71E6A37D7088D716E32F /* DreamRecorderApp.swift */,
+				D7668BA1B6807C2840D754A5 /* RootView.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -125,6 +148,7 @@
 		CE90E4C17F87D70AA24DDF67 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				BB604EB17C397C831940D52E /* DeviceIdentity.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -224,6 +248,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82531ACF0D6F39031646A99A /* BackendConfig.swift in Sources */,
+				72E9E794E946C2177E4A8F13 /* DeviceIdentity.swift in Sources */,
+				6C5A7EAB5939F62B766F532A /* Dream.swift in Sources */,
+				AAE49EA7C09BF61E9D05A82F /* DreamRecorderApp.swift in Sources */,
+				9778CEC3D51301B2B27D6707 /* DreamResponse.swift in Sources */,
+				69FF5D2D3340A5B921B924E4 /* RootView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69A2C63AB09AE0E7B6E03A1B /* DeviceIdentityTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
