@@ -1,80 +1,42 @@
-# Dream Recorder iOS
+# Dream Recorder
 
-iOS port of [Modem Works' Dream Recorder](https://github.com/modem-works/dream-recorder) — record a spoken dream, get back a short AI-generated video.
+An iOS port of [Modem Works' Dream Recorder](https://github.com/modem-works/dream-recorder) — the bedside device that records your dreams and turns them into short, surreal films.
 
-**Status:** 4 of 10 implementation phases complete (backend + iOS scaffold + API client). Visual system, record flow, feed, library, and ship prep still to do.
+> Wake up. Open the app. Speak a dream. A fuzzy little movie of it plays back.
 
-## What it is
+## The idea
 
-Open the app, press volume-up, speak a dream (≤30s). The app sends it through Whisper → GPT → Luma's `ray-flash-2` and plays the resulting 9:16 video in a swipeable feed. Device-only storage, anonymous device-ID auth, free tier = 3 dreams/week with a friend-tier code unlock for 10/week.
+Dreams fade fast. The original Dream Recorder is a glow-in-the-dark Raspberry Pi device on your nightstand — press a button, describe the dream, and a blurry 5-second AI-generated video plays on its tall little screen. No account, no feed, no social. Just a quiet object translating memory into image.
 
-Aesthetic: painterly impressionist landscape backgrounds, dotted-LED cursive typography, heavy grain. Phone is the device.
+This project ports that experience to the phone. The phone *is* the device. No idle/always-on mode, no notifications, no pressure. You open the app when you remember something and want to see it, and you close it.
 
-## Structure
+Dreams stay on your phone. Nothing is synced, shared, or indexed. Reinstalling the app forgets them, just like real dreams.
+
+## Aesthetic
+
+Painterly impressionist landscapes drifting behind the interface. Dotted-LED cursive typography — each letter made of little pinpricks of light. Heavy film grain. Warm, sun-bleached, a bit out-of-focus. The closest reference is a Monet painting photographed through an old CRT.
+
+## How it works
 
 ```
-docs/superpowers/
-  specs/2026-04-19-dream-recorder-ios-design.md   # full design spec
-  plans/2026-04-19-dream-recorder-ios.md          # task-by-task implementation plan
-
-supabase/                  # backend
-  migrations/              # Postgres schema + cleanup cron + atomic unlock RPC
-  functions/
-    _shared/               # response helpers, device/quota, OpenAI, Luma
-    _tests/                # Deno tests for pure logic
-    dreams-submit/         # POST /dreams/submit — full pipeline
-    dreams-pending/        # GET  /dreams/pending — recovery
-    unlock-redeem/         # POST /unlock/redeem  — friend tier
-  README.md                # backend operator notes
-
-DreamRecorder/             # iOS app (SwiftUI, SwiftData, AVFoundation, Metal)
-  App/                     # @main + RootView
-  Config/BackendConfig     # Supabase URL + anon key (placeholders)
-  Services/                # DeviceIdentity (Keychain), DreamAPI, DreamStore
-  Model/                   # SwiftData Dream + DTO + DreamAPIError
-  State/                   # (Phase 7+)
-  Visuals/                 # (Phase 5+) dotted text, grain shader, painterly bg, icons
-  Views/                   # (Phase 5+) record, dream card, feed, library, unlock
-  Resources/landscapes/    # 5–8 bundled painterly loops (Pau to curate)
-
-DreamRecorderTests/        # XCTest unit tests
-project.yml                # XcodeGen spec — run `xcodegen` to regenerate .xcodeproj
+press volume-up → speak (≤30s) → Whisper transcribes
+                                → GPT writes a surreal video prompt
+                                → Luma ray-flash-2 renders 5 seconds of 9:16 video
+                                → it plays on the phone, looping
 ```
 
-## Resuming work
+The generated clips land in a vertical feed. Swipe up through older dreams. Tap the library icon for a bookshelf-style grid of every dream you've made. Share via the standard iOS share sheet. Long-press the library icon to enter a friend-tier code (the only secret in the app).
 
-### One-time setup Pau still needs to do
+## Credits
 
-1. **Supabase project** — create at supabase.com (name: `dream-recorder-ios`). Save the project ref.
-2. **API keys** — OpenAI (platform.openai.com, ~$5 credits) and Luma (lumalabs.ai, ~$20 credits).
-3. **Link + deploy backend:**
-   ```bash
-   supabase link --project-ref <REF>
-   supabase db push
-   supabase secrets set OPENAI_API_KEY=... LUMA_API_KEY=...
-   supabase functions deploy dreams-submit dreams-pending unlock-redeem --no-verify-jwt
-   ```
-4. **Seed a test unlock code** (see `supabase/README.md`).
-5. **Fill placeholders** in `DreamRecorder/Config/BackendConfig.swift` (project URL + anon key).
-6. **Install Deno** to run backend tests: `brew install deno`.
-7. **Apple Developer team ID** in `project.yml` (`DEVELOPMENT_TEAM`), then `xcodegen generate`.
+- **Original Dream Recorder** by [Modem Works](https://modemworks.com/projects/dreamrecorder/) — the hardware, the concept, the aesthetic direction. This project wouldn't exist without theirs. MIT-licensed, lovely, go look.
+- **Video generation** by [Luma Labs](https://lumalabs.ai) (`ray-flash-2`, 9:16, 540p, 5s).
+- **Transcription + prompting** by [OpenAI](https://openai.com) (Whisper + `gpt-4o-mini`).
 
-### Building
+## Status
 
-```bash
-# iOS
-xcodegen generate
-xcodebuild -project DreamRecorder.xcodeproj -scheme DreamRecorder \
-  -destination 'platform=iOS Simulator,name=iPhone SE (3rd generation)' build
-
-# iOS tests (5/5 passing)
-xcodebuild -project DreamRecorder.xcodeproj -scheme DreamRecorder \
-  -destination 'platform=iOS Simulator,name=iPhone SE (3rd generation)' test
-
-# Backend tests (requires Deno)
-deno test supabase/functions/_tests/
-```
+Pre-release, under active development. See [PROGRESS.md](./PROGRESS.md) for implementation status and setup notes.
 
 ## License
 
-Same as upstream — MIT (inherited from Modem Works' original).
+MIT — inherited from upstream.
