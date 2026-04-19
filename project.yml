@@ -1,0 +1,59 @@
+name: DreamRecorder
+options:
+  bundleIdPrefix: com.paulichon
+  deploymentTarget:
+    iOS: "17.2"
+  createIntermediateGroups: true
+  generateEmptyDirectories: true
+settings:
+  base:
+    SWIFT_VERSION: "5.9"
+    IPHONEOS_DEPLOYMENT_TARGET: "17.2"
+    DEVELOPMENT_TEAM: "" # Pau fills in his Apple Developer team ID later
+targets:
+  DreamRecorder:
+    type: application
+    platform: iOS
+    deploymentTarget: "17.2"
+    sources:
+      - path: DreamRecorder
+    resources:
+      - path: DreamRecorder/Resources
+        optional: true
+    info:
+      path: DreamRecorder/Resources/Info.plist
+      properties:
+        NSMicrophoneUsageDescription: "Dream Recorder listens to your dream so it can turn it into a short film."
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        UIRequiresFullScreen: true
+        CFBundleDisplayName: "Dream Recorder"
+        UILaunchScreen:
+          UIColorName: ""
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.paulichon.dreamrecorder
+        TARGETED_DEVICE_FAMILY: "1"  # iPhone only for v1
+        ENABLE_PREVIEWS: YES
+        SWIFT_VERSION: "5.9"
+  DreamRecorderTests:
+    type: bundle.unit-test
+    platform: iOS
+    deploymentTarget: "17.2"
+    sources:
+      - path: DreamRecorderTests
+    dependencies:
+      - target: DreamRecorder
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.paulichon.dreamrecorder.tests
+        SWIFT_VERSION: "5.9"
+schemes:
+  DreamRecorder:
+    build:
+      targets:
+        DreamRecorder: all
+        DreamRecorderTests: [test]
+    test:
+      targets:
+        - DreamRecorderTests

@@ -1,1 +1,11 @@
 .superpowers/
+
+# Xcode artifacts
+DerivedData/
+build/
+*.xcuserstate
+*.xcuserdatad/
+xcuserdata/
+*.xcworkspace/xcuserdata/
+# XcodeGen regenerates this, but keep it checked in for now
+# DreamRecorder.xcodeproj/

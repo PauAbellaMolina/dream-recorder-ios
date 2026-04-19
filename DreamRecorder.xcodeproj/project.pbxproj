@@ -1,0 +1,476 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		C8A377B4E57256F933258685 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E5D876BC4E5BE4808934E2C1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF007CD5B05E22176F588017;
+			remoteInfo = DreamRecorder;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		428DCC8ECA216C0AE8D54DE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		46B165434471035C14AE0AB1 /* DreamRecorderTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = DreamRecorderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		65A40AF1A6598CE6441ACFD1 /* DreamRecorder.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = DreamRecorder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		024CCB682CD3E97A4FEFA459 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0B648851882F58B3A7E2AAE9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				65A40AF1A6598CE6441ACFD1 /* DreamRecorder.app */,
+				46B165434471035C14AE0AB1 /* DreamRecorderTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		166D9766B7C71AAC0B9E5E6C /* Config */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		20063432EA16EC99CF7FBF6F /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Icons;
+			sourceTree = "<group>";
+		};
+		362A2FA68D6AC357A3CF4C99 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		56000B8D9EE395079A9B4795 /* State */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		623217D7BE2243515D78C458 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				428DCC8ECA216C0AE8D54DE9 /* Info.plist */,
+				74F39B75C0894BFA6EDDA6FB /* landscapes */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		74F39B75C0894BFA6EDDA6FB /* landscapes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = landscapes;
+			sourceTree = "<group>";
+		};
+		8176CA55530F6706EE3D2B2C = {
+			isa = PBXGroup;
+			children = (
+				DFDE0BF6195CDC0DF14DC101 /* DreamRecorder */,
+				B221C82788F3E8E64FD4A037 /* DreamRecorderTests */,
+				0B648851882F58B3A7E2AAE9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8365C3161D5B11E3BA0CE718 /* Visuals */ = {
+			isa = PBXGroup;
+			children = (
+				20063432EA16EC99CF7FBF6F /* Icons */,
+				A38B663D6896955DA761E9AB /* Shaders */,
+			);
+			path = Visuals;
+			sourceTree = "<group>";
+		};
+		A38B663D6896955DA761E9AB /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Shaders;
+			sourceTree = "<group>";
+		};
+		B221C82788F3E8E64FD4A037 /* DreamRecorderTests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DreamRecorderTests;
+			sourceTree = "<group>";
+		};
+		BBE054E0B7BBC726E6B3DE70 /* App */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		CE90E4C17F87D70AA24DDF67 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		DFDE0BF6195CDC0DF14DC101 /* DreamRecorder */ = {
+			isa = PBXGroup;
+			children = (
+				BBE054E0B7BBC726E6B3DE70 /* App */,
+				166D9766B7C71AAC0B9E5E6C /* Config */,
+				362A2FA68D6AC357A3CF4C99 /* Model */,
+				623217D7BE2243515D78C458 /* Resources */,
+				CE90E4C17F87D70AA24DDF67 /* Services */,
+				56000B8D9EE395079A9B4795 /* State */,
+				024CCB682CD3E97A4FEFA459 /* Views */,
+				8365C3161D5B11E3BA0CE718 /* Visuals */,
+			);
+			path = DreamRecorder;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E8F26811DD01A2553536606A /* DreamRecorderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8E6CE4BBCEA02496C84028BB /* Build configuration list for PBXNativeTarget "DreamRecorderTests" */;
+			buildPhases = (
+				CCC74F72B402E23CCA27E2B6 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				800510A558C031F9433C42D0 /* PBXTargetDependency */,
+			);
+			name = DreamRecorderTests;
+			packageProductDependencies = (
+			);
+			productName = DreamRecorderTests;
+			productReference = 46B165434471035C14AE0AB1 /* DreamRecorderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EF007CD5B05E22176F588017 /* DreamRecorder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBF083936F3903DC7D3A1B58 /* Build configuration list for PBXNativeTarget "DreamRecorder" */;
+			buildPhases = (
+				1BFD58CC123AF251B390CAF4 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DreamRecorder;
+			packageProductDependencies = (
+			);
+			productName = DreamRecorder;
+			productReference = 65A40AF1A6598CE6441ACFD1 /* DreamRecorder.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E5D876BC4E5BE4808934E2C1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					E8F26811DD01A2553536606A = {
+						DevelopmentTeam = "";
+					};
+					EF007CD5B05E22176F588017 = {
+						DevelopmentTeam = "";
+					};
+				};
+			};
+			buildConfigurationList = 9E54AA2459277BD2AD056CEF /* Build configuration list for PBXProject "DreamRecorder" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 8176CA55530F6706EE3D2B2C;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 0B648851882F58B3A7E2AAE9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF007CD5B05E22176F588017 /* DreamRecorder */,
+				E8F26811DD01A2553536606A /* DreamRecorderTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1BFD58CC123AF251B390CAF4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCC74F72B402E23CCA27E2B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		800510A558C031F9433C42D0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF007CD5B05E22176F588017 /* DreamRecorder */;
+			targetProxy = C8A377B4E57256F933258685 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		52F0482681691F912B4550CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+		795056574E16003BD694E754 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+		B1CBE13ACB451013AEBF1FCC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.paulichon.dreamrecorder.tests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DreamRecorder.app/DreamRecorder";
+			};
+			name = Release;
+		};
+		C42C33BCCCD753C745DFF9DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.paulichon.dreamrecorder.tests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DreamRecorder.app/DreamRecorder";
+			};
+			name = Debug;
+		};
+		C98361C2BF145BA62DA297A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = DreamRecorder/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.paulichon.dreamrecorder;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		E52699171EFB7EE9A45A24D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = DreamRecorder/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.paulichon.dreamrecorder;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8E6CE4BBCEA02496C84028BB /* Build configuration list for PBXNativeTarget "DreamRecorderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C42C33BCCCD753C745DFF9DE /* Debug */,
+				B1CBE13ACB451013AEBF1FCC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		9E54AA2459277BD2AD056CEF /* Build configuration list for PBXProject "DreamRecorder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				795056574E16003BD694E754 /* Debug */,
+				52F0482681691F912B4550CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		CBF083936F3903DC7D3A1B58 /* Build configuration list for PBXNativeTarget "DreamRecorder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E52699171EFB7EE9A45A24D7 /* Debug */,
+				C98361C2BF145BA62DA297A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E5D876BC4E5BE4808934E2C1 /* Project object */;
+}
