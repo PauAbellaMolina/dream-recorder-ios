@@ -48,6 +48,7 @@ targets:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.paulichon.dreamrecorder.tests
         SWIFT_VERSION: "5.9"
+        GENERATE_INFOPLIST_FILE: YES
 schemes:
   DreamRecorder:
     build:
