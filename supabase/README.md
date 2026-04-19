@@ -23,4 +23,4 @@ values ('CODE-HERE', 'friend', 1);
 ## Testing
 
 - Unit tests: `deno test supabase/functions/_tests/`
-- Integration: see `supabase/functions/_tests/submit.integration.ts` (manual — requires real API keys)
+- End-to-end testing is manual via curl (see endpoint examples above).
